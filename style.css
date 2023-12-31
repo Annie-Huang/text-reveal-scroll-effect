@@ -40,6 +40,8 @@ p {
   */
   color: hsl(0 0% 100% / 0.2);
   background-image: linear-gradient(90deg, red, blue);
+  /* white white is the website value, but red blue is easier to see what's going on from development */
+  /*background-image: linear-gradient(90deg, white, white);*/
   background-clip: text;
 
   /* Then make the background size 50%, and cut it at the end (no-repeat) */
@@ -54,7 +56,7 @@ p {
      But as 2023/12/31, it's not supported by firefox and safari yet.
      by default, the timeline is at 0% when the subject is first visible at one edge of the scroller (element top reach the view point), and 100% when it reaches the opposite edge (element bottom exit the viewpoint).
      */
-  animation-timeline: view();
+  animation-timeline: view(y);
   /*animation-range: contain; !* Equivalent to contain 0% (restart animation when entire element visible) contain 100% (finish animation when entire element exit the view point) *!*/
 }
 
