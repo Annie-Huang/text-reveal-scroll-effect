@@ -1,0 +1,35 @@
+/* reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.hero {
+  /*background: url(https://imagedelivery.net/EaRd-fcN34Sf8k67-Dm-wQ/85edf392-1460-4a89-5850-b0cf39a67900/width=3840)*/
+  /*  center center no-repeat;*/
+
+  background: url(hero.webp) center center no-repeat;
+  background-size: cover;
+  min-height: 800px;
+}
+
+section {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  color: white;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+p {
+  font-size: 26px;
+  line-height: 1.3;
+}

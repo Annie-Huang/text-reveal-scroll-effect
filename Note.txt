@@ -1,0 +1,6 @@
+Can I copy this text reveal scroll effect with CSS-only? (https://www.youtube.com/watch?v=d10GaL6F-lA)
+
+https://shop.boox.com/en-ca/products/palma
+https://github.com/Annie-Huang/text-reveal-scroll-effect
+
+--------------------------------------------------------------------------
