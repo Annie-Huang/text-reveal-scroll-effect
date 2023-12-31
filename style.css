@@ -21,7 +21,6 @@ section {
   text-align: center;
   max-width: 800px;
   margin: 20px auto;
-  color: white;
 }
 
 .section-title {
@@ -32,4 +31,11 @@ section {
 p {
   font-size: 26px;
   line-height: 1.3;
+}
+
+/* Demo stuff */
+.scroll-reveal > * {
+  /* first make the text semi transparent, and then create a linear-gradient background*/
+  color: hsl(0 0% 100% / 0.2);
+  background-image: linear-gradient(90deg, red, blue);
 }
