@@ -34,7 +34,7 @@ p {
 }
 
 /* Demo stuff */
-.scroll-reveal > * {
+.scroll-reveal span {
   /* first make the text semi transparent, and then create a linear-gradient background
      then clip on the text
   */
@@ -51,8 +51,11 @@ p {
   /*animation: scroll-reveal 2s linear forwards;*/
   animation: scroll-reveal linear forwards;
   /* !!! animation-timeline is what makes it change background size when scroll.
-     But as 2023/12/31, it's not supported by firefox and safari yet.*/
+     But as 2023/12/31, it's not supported by firefox and safari yet.
+     by default, the timeline is at 0% when the subject is first visible at one edge of the scroller (element top reach the view point), and 100% when it reaches the opposite edge (element bottom exit the viewpoint).
+     */
   animation-timeline: view();
+  animation-range: contain; /* Equivalent to contain 0% (restart animation when entire element visible) contain 100% (finish animation when entire element exit the view point) */
 }
 
 @keyframes scroll-reveal {
