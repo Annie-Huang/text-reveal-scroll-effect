@@ -55,7 +55,19 @@ p {
      by default, the timeline is at 0% when the subject is first visible at one edge of the scroller (element top reach the view point), and 100% when it reaches the opposite edge (element bottom exit the viewpoint).
      */
   animation-timeline: view();
-  animation-range: contain; /* Equivalent to contain 0% (restart animation when entire element visible) contain 100% (finish animation when entire element exit the view point) */
+  /*animation-range: contain; !* Equivalent to contain 0% (restart animation when entire element visible) contain 100% (finish animation when entire element exit the view point) *!*/
+}
+
+/* use the same property: cover | contain so the <h2> and <p> will animate at the same speed.
+   and separate range value for each element so <p> only start after <h2> finishes
+*/
+.scroll-reveal h2 span {
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+.scroll-reveal p span {
+  animation-range-start: cover 22.5vh;
+  animation-range-end: cover 50vh;
 }
 
 @keyframes scroll-reveal {
