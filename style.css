@@ -44,6 +44,19 @@ p {
 
   /* Then make the background size 50%, and cut it at the end (no-repeat) */
   /*background-size: 50% 100%;*/
-  background-size: 25% 100%;
+  background-size: 0% 100%;
   background-repeat: no-repeat;
+
+  /* Then do the animation and then link to scroll */
+  /*animation: scroll-reveal 2s linear forwards;*/
+  animation: scroll-reveal linear forwards;
+  /* !!! animation-timeline is what makes it change background size when scroll.
+     But as 2023/12/31, it's not supported by firefox and safari yet.*/
+  animation-timeline: view();
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
 }
